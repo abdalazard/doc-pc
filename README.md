@@ -79,7 +79,7 @@ Default password: 123
 
 <h2 id="about-the-author">Sobre o Autor</h2>
 <img src="author.jpg" alt="Vinicius. Abdala" style="border-radius: 50%; width: 100px; height: 100px;">
-<p>Vinícius "Abdalazard" Abdala é um desenvolvedor de software apaixonado por tecnologia. Ele tem experiência em várias
+<p><strong>Vinícius "Abdalazard" Abdala</strong> é um desenvolvedor de software apaixonado por tecnologia. Ele tem experiência em várias
     linguagens de programação, incluindo PHP, JavaScript e SQL. Ele acredita no poder do código aberto e adora
     contribuir para projetos de código aberto em seu tempo livre e ministrar workshops. Você pode segui-lo no GitHub em
     <a href="https://github.com/abdalazard">github.com/abdalazard</a>.</p>
