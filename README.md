@@ -63,6 +63,8 @@ MY_PORTFOLIO_PAG = https:my-website.com
 </li>
 </ol>
 <p>Default user:</p>
-<p><strong>Login</strong>: admin<br>
-<strong>Default password</strong>: 123</p>
+<pre><code>
+Login</strong>: admin<br>
+Default password: 123
+</code></pre>
 <p>I appreciate your contributions in advance!</p>
