@@ -1,9 +1,15 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
-
-<p><img src="https://raw.githubusercontent.com/abdalazard/PortfolioCreator/main/icon/icon.png" alt="LOGO"></p>
+<body class="stackedit">
+  <div class="stackedit__html"><p><img src="https://raw.githubusercontent.com/abdalazard/PortfolioCreator/main/icon/icon.png" alt="LOGO"></p>
 <p>This project is a PHP-based portfolio creator that stores standardized data in a MySQL database. Additionally, it provides users with the ability to create their own custom templates.</p>
 <h2 id="current-project-status">Current Project Status</h2>
 <ul>
@@ -70,4 +76,7 @@ MY_PORTFOLIO_PAG = https:my-website.com
 <p><strong>Login</strong>: admin<br>
 <strong>Default password</strong>: 123</p>
 <p>I appreciate your contributions in advance!</p>
+</div>
+</body>
 
+</html>
