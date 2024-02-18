@@ -42,7 +42,9 @@
 <p><strong>Create a empty database</strong> for this project and then fill up the .env file with your database information:</p>
 </li>
 </ol>
-<pre><code>PROJECT_NAME = mydatabase
+<pre><code>
+
+PROJECT_NAME = mydatabase
 
 DB_HOST = localhost
 
