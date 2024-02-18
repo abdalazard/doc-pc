@@ -77,4 +77,4 @@ Default password: 123
 <p><strong>Vinícius "Abdalazard" Abdala</strong> is a software developer passionate about technology. He has experience in several
     programming languages, including PHP, JavaScript, and SQL. He believes in the power of open source and loves
     contributing to open source projects in his free time and giving workshops. You can follow him on GitHub at
-    <a href="https://github.com/abdalazard">github.com/abdalazard</a>.</p>
+    <a href="https://github.com/abdalazard">github.com/abdalazard</a> or in his  <a href="https://abdalazard.online">website</a>.</p>
