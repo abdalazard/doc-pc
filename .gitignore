@@ -1,3 +1,12 @@
+```
 db/.env
 vendor
 node_modules
+
+.db/.env
+.vendor
+.node_modules
+/db/.env
+/vendor
+/node_modules
+```
