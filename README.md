@@ -53,16 +53,13 @@
               href="https://github.com/abdalazard/PortfolioCreator">repository</a></p>
         </li>
         <li>
-          <p>Create a branch for your contribution (<code>git checkout
-              -b new-feature</code>)</p>
+          <p>Create a branch for your contribution (<code>git checkout -b new-feature</code>)</p>
         </li>
         <li>
-          <p>Make desired changes and commit (<code>git commit -m
-              'Adding new feature'</code>)</p>
+          <p>Make desired changes and commit (<code>git commit -m 'Adding new feature'</code>)</p>
         </li>
         <li>
-          <p>Push to the branch (<code>git push origin
-              new-feature</code>)</p>
+          <p>Push to the branch (<code>git push origin new-feature</code>)</p>
         </li>
         <li>
           <p>Open a <a
@@ -73,9 +70,7 @@
       <h2 id="how-to-contribute">What I need to know before start the
         project</h2>
       <ul>
-        <p>Create a .env file. In terminal line, write: <code>touch
-            db/.env</code>. Now you’ll find the .env inside of
-          db/ folder.</p>
+        <p>Create a .env file. In terminal line, write: <code>touch db/.env</code>. Now you’ll find the .env inside of db/ folder.</p>
       </ul>
       <ul>
         <p><strong>Create a empty database</strong> for this project
@@ -83,12 +78,12 @@
           information:</p>
       </ul>
       <pre><code>
-      PROJECT_NAME = mydatabase
-      DB_HOST = localhost
-      DB_USERNAME = root
-      DB_PASSWORD = mypassword
-      MY_PORTFOLIO_NAME = mydatabase
-      MY_PORTFOLIO_PAG = https://my-website.com
+      PROJECT_NAME = mydatabase<br>
+      DB_HOST = localhost<br>
+      DB_USERNAME = root<br>
+      DB_PASSWORD = mypassword<br>
+      MY_PORTFOLIO_NAME = mydatabase<br>
+      MY_PORTFOLIO_PAG = https://my-website.com<br>
     </code></pre>
       <ol start="8">
         <ul>
@@ -103,8 +98,8 @@
       </ol>
       <p>Default user:</p>
       <pre><code>
-        Login: admin<br>
-        Default password: 123
+Login: admin<br>
+Default password: 123
       </code></pre>
       <h2 id="how-to-contribute">How to create and work your own template:</h2>
       <p>On the template preview page, you can create a new one by
