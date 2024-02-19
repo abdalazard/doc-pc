@@ -1,25 +1,9 @@
--- CREATE TABLE `updates` (
---     `id` int(11) NOT NULL,
---     `title` varchar(255) NOT NULL,
---     `date` date NOT NULL DEFAULT current_timestamp(),
---     PRIMARY KEY (`id`)
--- ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
--- CREATE TABLE `contributions` (
---     `id` int(11) NOT NULL,
---     `id_update` int(11) NOT NULL,
---     `user` varchar(255) NOT NULL,
---     `picture` varchar(255) NOT NULL,
---     `link` varchar(255) NOT NULL,
---     FOREIGN KEY (`id_update`) REFERENCES `updates`(`id`),
---     PRIMARY KEY (`id`)
--- ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
---
 CREATE DATABASE IF NOT EXISTS `docs`;
 
 USE `docs`;
 
 CREATE TABLE IF NOT EXISTS `updates` (
-    `id` int(11) NOT NULL,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
     `title` varchar(255) NOT NULL,
     `date` date NOT NULL DEFAULT current_timestamp(),
     PRIMARY KEY (`id`),
@@ -27,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `updates` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `contributions` (
-    `id` int(11) NOT NULL,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
     `id_update` int(11) NOT NULL,
     `user` varchar(255) NOT NULL,
     `picture` varchar(255) NOT NULL,

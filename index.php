@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-require "src/updates.php";
+require "src/Updates.php";
 
 $updates = new Updates();
 $version = $updates->getVersion();
@@ -74,7 +74,7 @@ $version = $updates->getVersion();
         <p><img src="http://img.shields.io/static/v1?label=STEP%206%20-%20CREATE%20A%20DOCUMENTATION%20AND%20PUBLISH%20IT%20&amp;message=WORKING%20ON%20IT&amp;color=GREEN&amp;style=for-the-badge"
                 alt="Status"></p>
 
-        <?php if(count($version) > 1){ ?>
+        <?php if(count($version) >= 1){ ?>
         <h2 id="current-project-status">Updated versions</h2>
         <div class="update-box">
             <div id="updates">
