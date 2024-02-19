@@ -83,20 +83,21 @@
       MY_PORTFOLIO_NAME = mydatabase<br>
       MY_PORTFOLIO_PAG = https://my-website.com<br>
     </code></pre>
-      <ol start="8">
+    <ol start="8">
         <ul>
-          <p>In terminal, install all dependencies: <code>composer install</code></p>
+            <p>In terminal, install all dependencies: <code>composer install</code></p>
         </ul>
         <ul>
-          <p>For the last, in terminal command line you need to write
+            <p>For the last, in terminal command line you need to write
             the next command line
-             for create your user access:
+                for create your user access:
             <code>php migrate.php</code></p>
         </ul>
-      <p><strong>Default user:</strong></p>
+        <p><strong>Default user:</strong></p>
+    </ol>
       <pre><code>
-Login: admin<br>
-Default password: 123
+        Login: admin<br>
+        Default password: 123
       </code></pre>
       <h2 id="how-to-contribute">How to create and work your own template:</h2>
       <p>On the template preview page, you can create a new one by
@@ -109,7 +110,6 @@ Default password: 123
       </p>
       <hr />
       <p>I appreciate your contributions in advance!</p>
-    </ol>
 
 </div>
 </body>
