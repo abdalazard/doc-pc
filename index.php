@@ -81,7 +81,7 @@ $version = $updates->getVersion();
                 <?php foreach($version as $update) { ?>
                 <div class="update">
                     <h2 class="update-title"><?php echo $update['title']; ?> | Publish date:
-                        <?php echo $update['date']; ?></h2>
+                        <?php echo $update['date']; ?> ✅</h2>
                     <div class="update-content">
                         <p><strong>Details about the upgrade:</strong></p>
                         <ul>
@@ -176,6 +176,9 @@ $version = $updates->getVersion();
         Default password: 123
       </code></pre>
 
+        <p style="text-align:center;"><strong>I appreciate your contributions in advance! 👍</strong></p>
+
+
         <h2 id="how-to-contribute">How to create and work your own template:</h2>
         <p>On the template preview page, you can create a new one by
             clicking the button "<strong>Create template</strong>".
@@ -186,11 +189,6 @@ $version = $updates->getVersion();
             see the results on the template preview page.
         </p>
 
-        <hr />
-
-        <p>I appreciate your contributions in advance!</p>
-
-        <hr />
 
         <h2 id="about-the-author">About the author</h2>
         <img src="author.jpg" alt="Vinicius. Abdala" style="border-radius: 50%; width: 100px; height: 100px;">
@@ -206,6 +204,7 @@ $version = $updates->getVersion();
             <a href="https://github.com/abdalazard">github.com/abdalazard</a> or in
             his <a href="https://abdalazard.online">website</a>.
         </p>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
