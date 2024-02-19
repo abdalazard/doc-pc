@@ -87,16 +87,16 @@
     </code></pre>
       <ol start="8">
         <ul>
-          <p>In terminal, install all dependencies: <code>composer
-              install</code></p>
+          <p>In terminal, install all dependencies: <code>composer install</code></p>
         </ul>
         <ul>
           <p>For the last, in terminal command line you need to write
-            the next command line for create your user access:
+            the next command line
+             for create your user access:
             <code>php migrate.php</code></p>
         </ul>
       </ol>
-      <p>Default user:</p>
+      <p><strong>Default user:</strong></p>
       <pre><code>
 Login: admin<br>
 Default password: 123
