@@ -93,7 +93,6 @@
              for create your user access:
             <code>php migrate.php</code></p>
         </ul>
-      </ol>
       <p><strong>Default user:</strong></p>
       <pre><code>
 Login: admin<br>
@@ -110,6 +109,8 @@ Default password: 123
       </p>
       <hr />
       <p>I appreciate your contributions in advance!</p>
+    </ol>
+
 </div>
 </body>
 
