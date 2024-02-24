@@ -165,7 +165,7 @@ $version = $updates->getVersion();
             </ul>
             <ul>
                 <p>For the last, in terminal command line you need to write
-                    the next command line for create your user access:
+                    the next command line to create your user access:
                     <code>php migrate.php</code>
                 </p>
             </ul>
