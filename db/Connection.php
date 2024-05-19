@@ -8,6 +8,7 @@ class Connection
     public function __construct()
     {
         new EnvManager();
+        // phpinfo();
 
         $localhost = $_ENV['DB_HOST'];
         $user = $_ENV['DB_USERNAME'];

@@ -26,19 +26,35 @@ $version = $updates->getVersion();
         background-color: rgba(128, 128, 128, 0.2);
         padding: 2px;
         border-radius: 2%;
-        max-height: 200px;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .update-title {
+        margin: 0;
         color: rgba(0, 0, 0, 0.6);
-        margin-left: 15px;
+        text-align: start;
+        margin-left: 20px;
+        margin-top: 5px;
+        overflow: hidden;
+    }
+
+    .update-date {
+        margin-right: 20px;
+    }
+
+    .update-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .update-content {
+        margin-top: -30px;
         display: none;
         color: rgba(128, 128, 128, 0.9);
         margin-left: 30px;
+        overflow-x: hidden;
     }
     </style>
 </head>
@@ -70,32 +86,35 @@ $version = $updates->getVersion();
             <li><s><strong>Step 4 Completed:</strong> Testing - Working at</s></li>
             <li><s><strong>Step 5 Completed:</strong> Update user data
                     modal.</s></li>
+            <li><s><strong>Step 6 Completed:</strong> Documentation and project published.</s></li>
         </ul>
-        <p><img src="http://img.shields.io/static/v1?label=STEP%206%20-%20CREATE%20A%20DOCUMENTATION%20AND%20PUBLISH%20IT%20&amp;message=WORKING%20ON%20IT&amp;color=GREEN&amp;style=for-the-badge"
-                alt="Status"></p>
+        <p><img
+                src="http://img.shields.io/static/v1?label=STEP%207%20-%20WORKING%20ON%20IT&amp;message=FOCUSING%20ON%20IMPROVEMENTS&amp;color=GREEN&amp;style=for-the-badge">
 
-        <?php if(count($version) >= 1){ ?>
+            <?php
+        if($version) {
+            if(count($version) >= 0){ ?>
         <h2 id="current-project-status">Updated versions</h2>
         <div class="update-box">
-            <div id="updates">
-                <?php foreach($version as $update) { ?>
-                <div class="update">
-                    <h2 class="update-title"><?php echo $update['title']; ?> | Publish date:
-                        <?php echo $update['date']; ?> ✅</h2>
-                    <div class="update-content">
-                        <p><strong>Details about the upgrade:</strong></p>
-                        <ul>
-                            <?php foreach($update['descriptions'] as $description) { ?>
-                            <ol>- <?php echo $description['description']; ?></ol>
-                            <?php } ?>
-                        </ul>
-                    </div>
+            <?php foreach($version as $update) { ?>
+            <div class="update">
+                <a href="#update-1" style="text-decoration: none; color:rgba(0, 0, 0, 0.6);" class="update-header">
+                    <h2 class="update-title"><?php echo $update['title']; ?> </h2>
+                    <h6 class="update-date">Publish date: <?php echo date('d/m/y', strtotime($update['date'])) ?> - ✅
+                    </h6>
+                </a>
+                <div class="update-content">
+                    <p><strong>Details about the upgrade:</strong></p>
+                    <ul>
+                        <?php foreach($update['descriptions'] as $description) { ?>
+                        <ol>- <?php echo $description['description']; ?></ol>
+                        <?php } ?>
+                    </ul>
                 </div>
-                <?php } ?>
             </div>
+            <?php }} ?>
         </div>
         <?php } ?>
-
 
         <h2 id="contributions">Contributions</h2>
         <p>This project is open source, and contributions are highly
@@ -206,14 +225,28 @@ $version = $updates->getVersion();
         </p>
 
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Este é um exemplo de modal!</p>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
-        $('.update-title').click(function() {
+        $('a[href^="#update"]').on('click', function(e) {
+            e.preventDefault();
+
             $(this).next('.update-content').slideToggle('slow');
         });
     });
+
+    $('#myModal').show();
     </script>
 </body>
 
 </html>
+
+<!-- Donate to Support the Project -->
+<!-- Your contribution can help us maintain and improve this project. If you find it valuable and want to support its continued development, please consider making a donation. Every little bit helps! -->

@@ -6,7 +6,7 @@ class Updates {
     public function getVersion() {
         try {
 
-            $getUpdates = "SELECT * FROM updates";
+            $getUpdates = "SELECT * FROM updates ORDER BY date DESC";
             $db = $this->dataBase($getUpdates);
 
             $data = [];
