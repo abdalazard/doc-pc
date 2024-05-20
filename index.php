@@ -117,18 +117,18 @@ $version = $updates->getVersion();
         <h2 id="how-to-contribute">How to Contribute</h2>
         <ol>
             <li>
-                <p>Fork the <a href="https://github.com/abdalazard/PortfolioCreator">repository</a></p>
+                <p><strong>Fork</strong> the <a href="https://github.com/abdalazard/PortfolioCreator">repository</a></p>
             </li>
             <li>
-                <p>Create a branch for your contribution (<code>git checkout
+                <p><strong>Create</strong> a branch for your contribution (<code>git checkout
               -b new-feature</code>)</p>
             </li>
             <li>
-                <p>Make desired changes and commit (<code>git commit -m
+                <p><strong>Make</strong> desired changes and <strong>commit</strong> (<code>git commit -m
               'Adding new feature'</code>)</p>
             </li>
             <li>
-                <p>Push to the branch (<code>git push origin
+                <p><strong>Push</strong> to the branch (<code>git push origin
               new-feature</code>)</p>
             </li>
             <li>
@@ -163,19 +163,16 @@ $version = $updates->getVersion();
             
             MY_PORTFOLIO_PAG = https://my-website.com
         </code></pre>
-        <ol start="8">
-            <ul>
-                <p>In terminal, install all dependencies: <code>composer
+        <ol start="4">
+            <p>In terminal, install all dependencies: <code>composer
               install</code></p>
-            </ul>
-            <ul>
-                <p>For the last, in terminal command line you need to write
-                    the next command line to create your user access:
-                    <code>php migrate.php</code>
-                </p>
-            </ul>
+
+            <p>For the last, in terminal command line you need to write
+                the next command line to create your user access:
+                <code>php migrate.php</code>
+            </p>
         </ol>
-        <p>Default user:</p>
+        <p><strong>Default user:</strong></p>
         <pre style="width: 500px;"><code>
             Login: admin<br>
             Default password: 123
