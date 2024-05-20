@@ -221,17 +221,17 @@ $(document).ready(function() {
                 .then(data => {
                     pais = data.country_name;
 
-                    $('#modalText').text(`Donate to Support the Project
+                    if (pais == "Brazil") {
+                        $('#modalText').text(
+                            `Doe para Apoiar o Projeto Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
+                        );
+                    } else {
+                        $('#modalText').text(`Donate to Support the Project
                         Your contribution can help us maintain 
                         and improve this project. If you find it 
                         valuable and want to support its continued 
                         development, please consider making a donation. 
                         Every little bit helps`);
-
-                    if (pais == "Brazil") {
-                        $('#modalText').text(
-                            `Doe para Apoiar o Projeto Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
-                        );
                     }
 
                 });
