@@ -132,7 +132,7 @@ $version = $updates->getVersion();
               new-feature</code>)</p>
             </li>
             <li>
-                <p>Open a <a href="https://github.com/abdalazard/Portfolio-Creator/compare">pull
+                <p><strong>Open</strong> a <a href="https://github.com/abdalazard/Portfolio-Creator/compare">pull
                         request</a>.</p>
             </li>
 
