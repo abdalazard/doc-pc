@@ -27,13 +27,16 @@ $version = $updates->getVersion();
         <div class="logo">
             <p><a href="https://github.com/abdalazard/PortfolioCreator"><img
                         src="https://raw.githubusercontent.com/abdalazard/PortfolioCreator/main/icon/icon.png"
-                        alt="LOGO"></a></p>
+                        alt="LOGO">
+                </a>
+            </p>
         </div>
 
         <!-- Modal -->
         <div class="modalDonate" id="modalDonate">
-            <div class="close" id="closeButton"><a class="closeButtonStyle" href="#"><span>X</span></a></div>
+            <a class="closeButtonStyle close" id="closeButton" href="#">X</a>
             <a href="./donate.php" class="modalText">
+                <h2 id="dynamicTitle" class="dynamicTitle"></h2>
                 <p id="modalText" class="modalText"></p>
             </a>
         </div>
@@ -222,11 +225,13 @@ $(document).ready(function() {
                     pais = data.country_name;
 
                     if (pais == "Brazil") {
+                        $('#dynamicTitle').text('Apoie o Projeto');
                         $('#modalText').text(
-                            `Doe para Apoiar o Projeto Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
+                            `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
                         );
                     } else {
-                        $('#modalText').text(`Donate to Support the Project
+                        $('#dynamicTitle').text('Donate to Support the Project');
+                        $('#modalText').text(`
                         Your contribution can help us maintain 
                         and improve this project. If you find it 
                         valuable and want to support its continued 

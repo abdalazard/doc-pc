@@ -14,7 +14,7 @@
     color: rgba(0, 0, 0, 0.6);
     text-align: start;
     margin-left: 20px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     overflow: hidden;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .update-content {
-    margin-top: -30px;
+    /* margin-top: -30px; */
     display: none;
     color: rgba(128, 128, 128, 0.9);
     margin-left: 30px;
@@ -39,11 +39,14 @@
 
 .close {
     font-size: 15px;
-    margin-left: 320px;
+    justify-content: end;
+    display: flex;
+    padding: 10px;
 }
 .closeButtonStyle{
     text-decoration: none;
     color: white;
+    
 }
 
 .modalDonate{
@@ -60,8 +63,8 @@
     position: fixed;
     z-index: 1; 
     left: 10px;
-    top: 5;
-    width: 350px;
+    top: 3;
+    width: 200px;
     height: auto;
     overflow: hidden; 
 }
@@ -69,5 +72,14 @@
 .modalText{
     text-decoration: none;
     color: white;
-    margin-bottom: 5px;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.dynamicTitle { 
+    margin-bottom: -5px;
+    margin-top: -5px;
+    padding: 10px;
 }

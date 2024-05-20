@@ -25,6 +25,9 @@ $version = $updates->getVersion();
     <div class="stackedit__html">
         <h3>Donate</h3>
     </div>
+    <div>
+        <!-- Em breve colocar qr code ou chave pix -->
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
