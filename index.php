@@ -233,7 +233,7 @@ $(document).ready(function() {
                     if (pais == "Brazil") {
                         $('#dynamicTitle').text('Apoie o Projeto');
                         $('#modalText').text(
-                            `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
+                            `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda a manter o projeto no ar`
                         );
                     } else {
                         $('#dynamicTitle').text('Donate to Support the Project');
