@@ -18,6 +18,7 @@ $version = $updates->getVersion();
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <link rel="stylesheet" href="https://stackedit.io/style.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="stackedit">
@@ -210,6 +211,7 @@ $version = $updates->getVersion();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
+
     $('#modalText').text(
         `Donate to Support the Project\n
                 Your contribution can help us maintain 
@@ -218,6 +220,27 @@ $(document).ready(function() {
                 development, please consider making a donation. 
                 Every little bit helps`
     );
+
+    //Traduz donate 
+    const originalText = $('#modalText').text();
+    const apiKey = '401078914945-il1foogijkuun0f86j9mtgbbotprgscm.apps.googleusercontent.com';
+    $.ajax({
+        url: `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`,
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            q: originalText,
+            target: 'pt'
+        }),
+        success: function(response) {
+            const translatedText = response.data.translations[0].translatedText;
+            $('#modalText').text('')
+            $('#modalText').text(translatedText);
+        },
+        error: function(err) {
+            console.error('Erro ao traduzir o texto:', err);
+        }
+    });
 
     $('#modalDonate').show();
 });
@@ -238,6 +261,18 @@ $(window).on('click', function(event) {
         $('#modalDonate').hide();
     }
 });
+
+
+
+// // ID do elemento <p> com o texto original
+// const originalTextElementId = 'originalText';
+
+// // ID do elemento <p> onde o texto traduzido será exibido
+
+// // Obtém o texto original do elemento <p>
+
+// // Faz a solicitação para a API de tradução
+// 
 </script>
 
 </html>
