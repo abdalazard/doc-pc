@@ -95,12 +95,24 @@ $version = $updates->getVersion();
         if($version) {
             if(count($version) >= 0){ ?>
         <h2 id="current-project-status">Updated versions</h2>
+        <div>
+            <h3>Legend for Release Version Status:</h3>
+            <ul>
+                <li>✅ - Stable</li>
+                <li>🚧 - Pre-release - Unstable</li>
+                <li>🚩 - Not recommended</li>
+            </ul>
+        </div>
         <div class="update-box">
             <?php foreach($version as $update) { ?>
             <div class="update">
                 <a href="#update-1" style="text-decoration: none; color:rgba(0, 0, 0, 0.6);" class="update-header">
                     <h2 class="update-title"><?php echo $update['title']; ?> </h2>
-                    <h6 class="update-date">Publish date: <?php echo date('d/m/y', strtotime($update['date'])) ?> - ✅
+                    <h6 class="update-date">Publish date: <?php echo date('d/m/y', strtotime($update['date'])) ?> -
+                        <?php if($update['status'] == 1) { ?> ✅ <?php }
+                        elseif($update['status'] == 2)
+                        {?> 🚧 <?php } else {?> 🚩 <?php } ?>
+                        <!-- Preciso criar uma coluna chamada status na tabela update para puxar aqui e mostrar o status registradoRGGRF -->
                     </h6>
                 </a>
                 <div class="update-content">
