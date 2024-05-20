@@ -62,7 +62,7 @@
     left: 10px;
     top: 5;
     width: 350px;
-    height: 180px;
+    height: auto;
     overflow: hidden; 
 }
 

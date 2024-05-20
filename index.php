@@ -205,75 +205,56 @@ $version = $updates->getVersion();
             <a href="https://github.com/abdalazard">github.com/abdalazard</a> or in
             his <a href="https://abdalazard.online">website</a>.
         </p>
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-function translateText(text, targetLang, authKey) {
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            url: "https://api-free.deepl.com/v2/translate",
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json", // Alterado para JSON
-                "Authorization": `Bearer ${authKey}` // Usando Bearer Token
-            },
-            data: JSON.stringify({ // Enviando os dados como JSON
-                text: text,
-                target_lang: targetLang
-            }),
-            success: function(response) {
-                resolve(response.translations[0].text);
-            },
-            error: function(xhr, status, error) {
-                reject(error);
-            }
-        });
-    });
-}
-
-
 $(document).ready(function() {
-
     //Traduz donate 
-    const textToTranslate = $('#modalText').text();
-    const targetLang = 'pt-br'
-    const authKey = 'bdb70573-210a-41c0-a70c-0adb635caa1a:fx';
+    let pais;
 
-    $('#modalText').text(`Donate to Support the Project
-    Your contribution can help us maintain 
-    and improve this project. If you find it 
-    valuable and want to support its continued 
-    development, please consider making a donation. 
-    Every little bit helps`);
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const ip = data.ip;
+            fetch(`https://ipapi.co/${ip}/json`)
+                .then(response => response.json())
+                .then(data => {
+                    pais = data.country_name;
 
-    translateText(textToTranslate, targetLang, authKey)
-        .then(translatedText => {
-            console.log(translatedText);
-            $('#modalText').text(translatedText); // Atualizando o texto traduzido
-        })
-        .catch(error => {
-            console.error("Erro ao traduzir texto:", error);
+                    $('#modalText').text(`Donate to Support the Project
+                        Your contribution can help us maintain 
+                        and improve this project. If you find it 
+                        valuable and want to support its continued 
+                        development, please consider making a donation. 
+                        Every little bit helps`);
+
+                    if (pais == "Brazil") {
+                        $('#modalText').text(
+                            `Doe para Apoiar o Projeto Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda`
+                        );
+                    }
+
+                });
         });
-});
 
-$('#modalDonate').show();
+    $('#modalDonate').show();
 
-$('#closeButton').hide();
+    $('#closeButton').hide();
 
-setTimeout(() => {
-    $('#modalDonate').hide();
-}, 30000)
-$('#closeButton').fadeIn(5000);
-
-$('#closeButton').on('click', function(event) {
-    $('#modalDonate').hide();
-});
-
-$(window).on('click', function(event) {
-    if (event.target == $('#modalText')[0]) {
+    setTimeout(() => {
         $('#modalDonate').hide();
-    }
+    }, 30000)
+    $('#closeButton').fadeIn(5000);
+
+    $('#closeButton').on('click', function(event) {
+        $('#modalDonate').hide();
+    });
+
+    $(window).on('click', function(event) {
+        if (event.target == $('#modalText')[0]) {
+            $('#modalDonate').hide();
+        }
+    });
 });
 </script>
 
