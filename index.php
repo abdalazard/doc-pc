@@ -32,7 +32,9 @@ $version = $updates->getVersion();
         <!-- Modal -->
         <div class="modalDonate" id="modalDonate">
             <div class="close" id="closeButton"><a class="closeButtonStyle" href="#"><span>X</span></a></div>
-            <p id="modalText"></p>
+            <a href="./donate.php" class="modalText">
+                <p id="modalText" class="modalText"></p>
+            </a>
         </div>
         <!-- Modal -->
 
@@ -40,7 +42,8 @@ $version = $updates->getVersion();
             standardized data in a MySQL database. Additionally, it provides
             users with the ability to create their own custom templates.</p>
         <p>Repo: <a
-                href="https://github.com/abdalazard/PortfolioCreator">https://github.com/abdalazard/PortfolioCreator</a>
+                href=" https://github.com/abdalazard/PortfolioCreator">https://github.com/abdalazard/PortfolioCreator
+            </a>
         </p>
         <h2 id="current-project-status">Current Project Status</h2>
         <ul>
@@ -213,16 +216,17 @@ $(document).ready(function() {
                 and improve this project. If you find it 
                 valuable and want to support its continued 
                 development, please consider making a donation. 
-                Every little bit helps!`
+                Every little bit helps`
     );
 
     $('#modalDonate').show();
 });
+
 $('#closeButton').hide();
 
 setTimeout(() => {
     $('#modalDonate').hide();
-}, 10000)
+}, 30000)
 $('#closeButton').fadeIn(5000);
 
 $('#closeButton').on('click', function(event) {

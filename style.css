@@ -65,3 +65,8 @@
     height: 180px;
     overflow: hidden; 
 }
+
+.modalText{
+    text-decoration: none;
+    color: white;
+}
