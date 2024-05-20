@@ -212,6 +212,12 @@ $version = $updates->getVersion();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
+    $('a[href^="#update"]').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).next('.update-content').slideToggle('slow');
+    });
+
     //Traduz donate 
     let pais;
 
