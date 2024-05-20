@@ -206,7 +206,6 @@ $version = $updates->getVersion();
             his <a href="https://abdalazard.online">website</a>.
         </p>
 
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -224,7 +223,7 @@ function translateText(text, targetLang, authKey) {
                 target_lang: targetLang
             }),
             success: function(response) {
-                resolve(JSON.parse(response.responseText).translations[0].text);
+                resolve(response.translations[0].text);
             },
             error: function(xhr, status, error) {
                 reject(error);
@@ -233,6 +232,7 @@ function translateText(text, targetLang, authKey) {
     });
 }
 
+
 $(document).ready(function() {
 
     //Traduz donate 
@@ -240,14 +240,12 @@ $(document).ready(function() {
     const targetLang = 'pt-br'
     const authKey = 'bdb70573-210a-41c0-a70c-0adb635caa1a:fx';
 
-
     $('#modalText').text(`Donate to Support the Project
     Your contribution can help us maintain 
     and improve this project. If you find it 
     valuable and want to support its continued 
     development, please consider making a donation. 
     Every little bit helps`);
-
 
     translateText(textToTranslate, targetLang, authKey)
         .then(translatedText => {
