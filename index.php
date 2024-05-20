@@ -15,57 +15,26 @@ $version = $updates->getVersion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Creator Docs</title>
     <link rel="icon" href="icon.png">
-
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <link rel="stylesheet" href="https://stackedit.io/style.css" />
-    <style>
-    .logo {
-        text-align: center;
-    }
-
-    .update-box {
-        background-color: rgba(128, 128, 128, 0.2);
-        padding: 2px;
-        border-radius: 2%;
-        overflow: hidden;
-    }
-
-    .update-title {
-        margin: 0;
-        color: rgba(0, 0, 0, 0.6);
-        text-align: start;
-        margin-left: 20px;
-        margin-top: 5px;
-        overflow: hidden;
-    }
-
-    .update-date {
-        margin-right: 20px;
-    }
-
-    .update-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .update-content {
-        margin-top: -30px;
-        display: none;
-        color: rgba(128, 128, 128, 0.9);
-        margin-left: 30px;
-        overflow-x: hidden;
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body class="stackedit">
+
     <div class="stackedit__html">
         <div class="logo">
             <p><a href="https://github.com/abdalazard/PortfolioCreator"><img
                         src="https://raw.githubusercontent.com/abdalazard/PortfolioCreator/main/icon/icon.png"
                         alt="LOGO"></a></p>
         </div>
+
+        <!-- Modal -->
+        <div class="modalDonate" id="modalDonate">
+            <div class="close" id="closeButton"><a class="closeButtonStyle" href="#"><span>X</span></a></div>
+            <p id="modalText"></p>
+        </div>
+        <!-- Modal -->
 
         <p>This project is a PHP-based portfolio creator that stores
             standardized data in a MySQL database. Additionally, it provides
@@ -90,7 +59,6 @@ $version = $updates->getVersion();
         </ul>
         <p><img
                 src="http://img.shields.io/static/v1?label=STEP%207%20-%20WORKING%20ON%20IT&amp;message=FOCUSING%20ON%20IMPROVEMENTS&amp;color=GREEN&amp;style=for-the-badge">
-
             <?php
         if($version) {
             if(count($version) >= 0){ ?>
@@ -112,7 +80,6 @@ $version = $updates->getVersion();
                         <?php if($update['status'] == 1) { ?> ✅ <?php }
                         elseif($update['status'] == 2)
                         {?> 🚧 <?php } else {?> 🚩 <?php } ?>
-                        <!-- Preciso criar uma coluna chamada status na tabela update para puxar aqui e mostrar o status registradoRGGRF -->
                     </h6>
                 </a>
                 <div class="update-content">
@@ -176,19 +143,19 @@ $version = $updates->getVersion();
                 and then fill up the .env file with your database
                 information:</p>
         </ul>
-        <pre><code>
-      PROJECT_NAME = mydatabase
-      
-      DB_HOST = localhost
-      
-      DB_USERNAME = root
-      
-      DB_PASSWORD = mypassword
-      
-      MY_PORTFOLIO_NAME = mydatabase
-      
-      MY_PORTFOLIO_PAG = https://my-website.com
-    </code></pre>
+        <pre style="width: 500px;"><code>
+            PROJECT_NAME = mydatabase
+            
+            DB_HOST = localhost
+            
+            DB_USERNAME = root
+            
+            DB_PASSWORD = mypassword
+            
+            MY_PORTFOLIO_NAME = mydatabase
+            
+            MY_PORTFOLIO_PAG = https://my-website.com
+        </code></pre>
         <ol start="8">
             <ul>
                 <p>In terminal, install all dependencies: <code>composer
@@ -202,13 +169,12 @@ $version = $updates->getVersion();
             </ul>
         </ol>
         <p>Default user:</p>
-        <pre><code>
-        Login: admin<br>
-        Default password: 123
+        <pre style="width: 500px;"><code>
+            Login: admin<br>
+            Default password: 123
       </code></pre>
 
         <p style="text-align:center;"><strong>I appreciate your contributions in advance! 👍</strong></p>
-
 
         <h2 id="how-to-contribute">How to create and work your own template:</h2>
         <p>On the template preview page, you can create a new one by
@@ -236,29 +202,38 @@ $version = $updates->getVersion();
             his <a href="https://abdalazard.online">website</a>.
         </p>
 
-    </div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Este é um exemplo de modal!</p>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('a[href^="#update"]').on('click', function(e) {
-            e.preventDefault();
-
-            $(this).next('.update-content').slideToggle('slow');
-        });
-    });
-
-    $('#myModal').show();
-    </script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#modalText').text(
+        `Donate to Support the Project\n
+                Your contribution can help us maintain 
+                and improve this project. If you find it 
+                valuable and want to support its continued 
+                development, please consider making a donation. 
+                Every little bit helps!`
+    );
+
+    $('#modalDonate').show();
+});
+$('#closeButton').hide();
+
+setTimeout(() => {
+    $('#modalDonate').hide();
+}, 10000)
+$('#closeButton').fadeIn(5000);
+
+$('#closeButton').on('click', function(event) {
+    $('#modalDonate').hide();
+});
+
+$(window).on('click', function(event) {
+    if (event.target == $('#modalText')[0]) {
+        $('#modalDonate').hide();
+    }
+});
+</script>
 
 </html>
-
-<!-- Donate to Support the Project -->
-<!-- Your contribution can help us maintain and improve this project. If you find it valuable and want to support its continued development, please consider making a donation. Every little bit helps! -->
