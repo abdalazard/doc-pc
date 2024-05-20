@@ -210,40 +210,56 @@ $version = $updates->getVersion();
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+function translateText(text, targetLang, authKey) {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: "https://api-free.deepl.com/v2/translate",
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json", // Alterado para JSON
+                "Authorization": `Bearer ${authKey}` // Usando Bearer Token
+            },
+            data: JSON.stringify({ // Enviando os dados como JSON
+                text: text,
+                target_lang: targetLang
+            }),
+            success: function(response) {
+                resolve(JSON.parse(response.responseText).translations[0].text);
+            },
+            error: function(xhr, status, error) {
+                reject(error);
+            }
+        });
+    });
+}
+
 $(document).ready(function() {
 
-    $('#modalText').text(
-        `Donate to Support the Project\n
-                Your contribution can help us maintain 
-                and improve this project. If you find it 
-                valuable and want to support its continued 
-                development, please consider making a donation. 
-                Every little bit helps`
-    );
-
     //Traduz donate 
-    const originalText = $('#modalText').text();
-    const apiKey = '401078914945-il1foogijkuun0f86j9mtgbbotprgscm.apps.googleusercontent.com';
-    $.ajax({
-        url: `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`,
-        method: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({
-            q: originalText,
-            target: 'pt'
-        }),
-        success: function(response) {
-            const translatedText = response.data.translations[0].translatedText;
-            $('#modalText').text('')
-            $('#modalText').text(translatedText);
-        },
-        error: function(err) {
-            console.error('Erro ao traduzir o texto:', err);
-        }
-    });
+    const textToTranslate = $('#modalText').text();
+    const targetLang = 'pt-br'
+    const authKey = 'bdb70573-210a-41c0-a70c-0adb635caa1a:fx';
 
-    $('#modalDonate').show();
+
+    $('#modalText').text(`Donate to Support the Project
+    Your contribution can help us maintain 
+    and improve this project. If you find it 
+    valuable and want to support its continued 
+    development, please consider making a donation. 
+    Every little bit helps`);
+
+
+    translateText(textToTranslate, targetLang, authKey)
+        .then(translatedText => {
+            console.log(translatedText);
+            $('#modalText').text(translatedText); // Atualizando o texto traduzido
+        })
+        .catch(error => {
+            console.error("Erro ao traduzir texto:", error);
+        });
 });
+
+$('#modalDonate').show();
 
 $('#closeButton').hide();
 
@@ -261,18 +277,6 @@ $(window).on('click', function(event) {
         $('#modalDonate').hide();
     }
 });
-
-
-
-// // ID do elemento <p> com o texto original
-// const originalTextElementId = 'originalText';
-
-// // ID do elemento <p> onde o texto traduzido será exibido
-
-// // Obtém o texto original do elemento <p>
-
-// // Faz a solicitação para a API de tradução
-// 
 </script>
 
 </html>
