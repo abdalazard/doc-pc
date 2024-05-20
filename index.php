@@ -244,11 +244,12 @@ $(document).ready(function() {
                         development, please consider making a donation. 
                         Every little bit helps`);
                     }
+                    $('#modalDonate').show();
+
 
                 });
         });
 
-    $('#modalDonate').show();
 
     $('#closeButton').hide();
 
