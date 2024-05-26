@@ -228,7 +228,7 @@ $(document).ready(function() {
                     pais = data.country_name;
 
                     if (pais == "Brazil") {
-                        $('#dynamicTitle').text('Apoie o Projeto!');
+                        $('#dynamicTitle').text('Doe e ajude o Rio Grande do Sul!');
                         // $('#modalText').text(
                         //     `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda a manter o projeto no ar e a receber atualizações!`
                         // );
