@@ -228,23 +228,22 @@ $(document).ready(function() {
                     pais = data.country_name;
 
                     if (pais == "Brazil") {
-                        $('#dynamicTitle').text('Doe e ajude o Rio Grande do Sul!');
-                        // $('#modalText').text(
-                        //     `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda a manter o projeto no ar e a receber atualizações!`
-                        // );
-                        $('#modalText').html('<img src="./qrcode_rs.png" alt="QR Code para doação">');
+                        $('#dynamicTitle').text('Doe e ajude o projeto!');
+                         $('#modalText').text(
+                             `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda a manter o projeto no ar e a receber atualizações!`
+                         );
+                        $('#modalText').html('<img src="./qr_vinicius.png" alt="QR Code para doação">');
                     } else {
                         $('#dynamicTitle').text('Donate to Support the Project!');
-                        // $('#modalText').text(`
-                        // Your contribution can help us maintain 
-                        // and improve this project. If you find it 
-                        // valuable and want to support its continued 
-                        // development, please consider making a donation. 
-                        // Every little bit helps keep the project online and getting updates`);
-                        $('#modalText').html('<img src="./qrcode_rs.png" alt="QR Code para doação">');
+                        $('#modalText').text(`
+                        Your contribution can help us maintain 
+                        and improve this project. If you find it 
+                        valuable and want to support its continued 
+                        development, please consider making a donation. 
+                        Every little bit helps keep the project online and getting updates`);
+                        $('#modalText').html('<img src="./qr_vinicius.png" alt="QR Code para doação">');
                     }
                     $('#modalDonate').show();
-
 
                 });
         });
