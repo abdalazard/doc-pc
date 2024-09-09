@@ -36,8 +36,9 @@ $version = $updates->getVersion();
         <div class="modalDonate" id="modalDonate">
             <a class="closeButtonStyle close" id="closeButton" href="#">X</a>
             <a href="./donate.php" class="modalText">
-                <h2 id="dynamicTitle" class="dynamicTitle"></h2>
-                <p id="modalText" class="modalText"></p>
+            <h2 id="dynamicTitle" class="dynamicTitle"></h2>
+            <h2 id="dynamicTitleB" class="dynamicTitleB"></h2>
+            <p id="modalText" class="modalText"></p>
                 <p id="modalTextB" class="modalText"></p>
             </a>
         </div>
@@ -229,13 +230,17 @@ $(document).ready(function() {
                     pais = data.country_name;
 
                     if (pais == "Brazil") {
-                        $('#dynamicTitle').text('Doe e ajude o projeto!');
+                        $('#dynamicTitle').text('Doe e ajude o projeto!PIX');
+                        $('#dynamicTitleB').text('PIX:');
+
                          $('#modalTextB').text(
                              `Sua contribuição pode nos ajudar a manter e melhorar este projeto. Se você o considera valioso e deseja apoiar seu desenvolvimento contínuo, por favor, considere fazer uma doação. Cada pequena contribuição ajuda a manter o projeto no ar e a receber atualizações!`
                          );
                         $('#modalText').html('<img src="./qr_vinicius.png" alt="QR Code para doação">');
                     } else {
                         $('#dynamicTitle').text('Donate to Support the Project!');
+                        $('#dynamicTitleB').text('PIX:');
+
                         $('#modalTextB').text(`
                         Your contribution can help us maintain 
                         and improve this project. If you find it 
