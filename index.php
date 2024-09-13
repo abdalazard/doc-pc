@@ -102,6 +102,8 @@ $version = $updates->getVersion();
             </div>
             <?php }} ?>
         </div>
+        <p hidden>aaa</p>
+
         <?php } ?>
 
         <h2 id="contributions">Contributions</h2>
