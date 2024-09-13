@@ -94,6 +94,8 @@ $version = $updates->getVersion();
                 <?php } ?>
             </div>
         </div>
+        <p hidden>aaa</p>
+
         <?php } ?>
 
 
