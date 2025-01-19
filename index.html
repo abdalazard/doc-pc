@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Creator Docs</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body class="stackedit">
+    <div class="stackedit__html">
+      <div class="logo">
+        <p>
+          <a href="https://github.com/abdalazard/PortfolioCreator"
+            ><img
+              src="https://raw.githubusercontent.com/abdalazard/PortfolioCreator/main/icon/icon.png"
+              alt="LOGO"
+          /></a>
+        </p>
+      </div>
+
+      <p>
+        This project is a PHP-based portfolio creator that stores standardized
+        data in a MySQL database. Additionally, it provides users with the
+        ability to create their own custom templates.
+      </p>
+      <p>
+        Repo:
+        <a href="https://github.com/abdalazard/PortfolioCreator"
+          >https://github.com/abdalazard/PortfolioCreator</a
+        >
+      </p>
+      <h2 id="current-project-status">Current Project Status</h2>
+      <ul>
+        <li><s><strong>Step 1 Completed:</strong> Implementation of the
+                portfolio builder.</s></li>
+        <li><s><strong>Step 2 Completed:</strong> working on
+                the portfolio editing feature and deletion
+                option.</s></li>
+        <li><s><strong>Step 3 Completed:</strong> Developing the
+                template system and the ability to select different
+                styles.</s></li>
+        <li><s><strong>Step 4 Completed:</strong> Testing - Working at</s></li>
+        <li><s><strong>Step 5 Completed:</strong> Update user data
+                modal.</s></li>
+        <li><s><strong>Step 6 Completed:</strong> Documentation and project published.</s></li>
+    </ul>
+
+      <h2 id="current-project-status">Updated Versions</h2>
+      <div>
+        <h3>Legend for Release Version Status:</h3>
+        <ul>
+          <li>✅ - Stable</li>
+          <li>🚧 - Pre-release - Unstable</li>
+          <li>🚩 - Not recommended</li>
+        </ul>
+      </div>
+
+      <div id="update-list" class="update-box">
+        <!-- Atualizações serão carregadas aqui via JavaScript -->
+      </div>
+
+      <h2 id="contributions">Contributions</h2>
+        <p>This project is open source, and contributions are highly
+            welcome! If you have ideas, suggestions, or corrections, feel
+            free to <a href="https://github.com/abdalazard/Portfolio-Creator/issues/new">open
+                an issue</a> or submit a <a href="https://github.com/abdalazard/Portfolio-Creator/compare">pull
+                request</a>.</p>
+        <h2 id="technologies-used">Technologies Used</h2>
+        <ul>
+            <li><strong>Backend:</strong> PHP 7.4.33</li>
+            <li><strong>Frontend:</strong> jQuery 3.5.1</li>
+            <li><strong>Database:</strong> MySQL 8.0.30</li>
+        </ul>
+        <h2 id="how-to-contribute">How to Contribute</h2>
+        <ol>
+            <li>
+                <p><strong>Fork</strong> the <a href="https://github.com/abdalazard/PortfolioCreator">repository</a></p>
+            </li>
+            <li>
+                <p><strong>Create</strong> a branch for your contribution (<code>git checkout
+              -b new-feature</code>)</p>
+            </li>
+            <li>
+                <p><strong>Make</strong> desired changes and <strong>commit</strong> (<code>git commit -m
+              'Adding new feature'</code>)</p>
+            </li>
+            <li>
+                <p><strong>Push</strong> to the branch (<code>git push origin
+              new-feature</code>)</p>
+            </li>
+            <li>
+                <p><strong>Open</strong> a <a href="https://github.com/abdalazard/Portfolio-Creator/compare">pull
+                        request</a>.</p>
+            </li>
+
+        </ol>
+        <h2 id="how-to-contribute">What I need to know before start the
+            project</h2>
+
+        <ul>
+            <p>Create a .env file. In terminal line, write: <code>touch
+            db/.env</code>. Now you’ll find the .env inside of
+                db/ folder.</p>
+        </ul>
+        <ul>
+            <p><strong>Create a empty database</strong> for this project
+                and then fill up the .env file with your database
+                information:</p>
+        </ul>
+        <pre style="width: 500px;"><code>
+            PROJECT_NAME = mydatabase
+            
+            DB_HOST = localhost
+            
+            DB_USERNAME = root
+            
+            DB_PASSWORD = mypassword
+            
+            MY_PORTFOLIO_NAME = mydatabase
+            
+            MY_PORTFOLIO_PAG = https://my-website.com
+        </code></pre>
+        <ol start="4">
+            <p>In terminal, install all dependencies: <code>composer
+              install</code></p>
+
+            <p>For the last, in terminal command line you need to write
+                the next command line to create your user access:
+                <code>php migrate.php</code>
+            </p>
+        </ol>
+        <p><strong>Default user:</strong></p>
+        <pre style="width: 500px;"><code>
+            Login: admin<br>
+            Default password: 123
+      </code></pre>
+
+        <p style="text-align:center;"><strong>I appreciate your contributions in advance! 👍</strong></p>
+
+        <h2 id="how-to-contribute">How to create and work your own template:</h2>
+        <p>On the template preview page, you can create a new one by
+            clicking the button "<strong>Create template</strong>".
+            Upon entering the name and clicking create, a folder with three files
+            (<strong>HTML</strong>, <strong>CSS</strong> and
+            <strong>JavaScript</strong>) bearing the same name as your template
+            will be created in the templates folder. You can edit these files and
+            see the results on the template preview page.
+        </p>
+
+
+        <h2 id="about-the-author">About the author</h2>
+        <img src="author.jpg" alt="Vinicius. Abdala" style="border-radius: 50%; width: 100px; height: 100px;">
+        <p><strong>Vinícius "Abdalazard" Abdala</strong> is a software
+            developer passionate about technology. He has experience in
+            several
+            programming languages, including PHP, JavaScript, and SQL. Also
+            he worked and works in big projects, using technologies like
+            React.js, React Native and jQuery. He believes in the power of
+            open source and loves
+            contributing to open source projects in his free time and giving
+            workshops. You can follow him on GitHub at
+            <a href="https://github.com/abdalazard">github.com/abdalazard</a> or in
+            his <a href="https://abdalazard.online">website</a>.
+        </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const updates = [
+                {
+                    id: 1,
+                    title: "Pré-lançamento",
+                    date: "2024-02-12",
+                    status: "Finalizado",
+                    descriptions: [
+                        { description: "Deploy do projeto em fase de testes." }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Lançamento da documentação",
+                    date: "2024-05-03",
+                    status: "Finalizado",
+                    descriptions: [
+                        { description: "Publicação completa da documentação técnica para uso do Portfolio Creator." }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Lançamento de novo tema",
+                    date: "2024-06-30",
+                    status: "Finalizado",
+                    descriptions: [
+                        { description: "Nova feature: Registro e escolha de temas." },
+                        { description: "Lançamento do template ''example'' para personalização do portfólio." }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Correção de bugs críticos",
+                    date: "2024-11-25",
+                    status: "Em Andamento",
+                    descriptions: [
+                        { description: "Correção de erros reportados pelos usuários que afetavam a estabilidade do sistema." }
+                    ]
+                }
+            ];
+    
+            // Loop para gerar as atualizações dinamicamente
+            updates.forEach(function(update) {
+                const statusIcon = update.status === "Finalizado" ? "✅" :
+                                   update.status === "Em Andamento" ? "🚧" : "🚩";
+    
+                // Gerando o HTML das atualizações
+                let updateHtml = `
+                    <div class="update">
+                        <a href="#update-${update.id}" style="text-decoration: none; color: rgba(0, 0, 0, 0.6);" class="update-header">
+                            <h2 class="update-title">${update.title}</h2>
+                            <h6 class="update-date">
+                                Publish date: ${new Date(update.date).toLocaleDateString()} - ${statusIcon}
+                            </h6>
+                        </a>
+                        <div class="update-content" style="display: none;">
+                            <p><strong>Details about the upgrade:</strong></p>
+                            <ul>
+                                ${update.descriptions.map(desc => `<li> ${desc.description}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                // Adicionando a atualização no container
+                $('#update-list').append(updateHtml);
+            });
+    
+            // Função para exibir/ocultar o conteúdo das atualizações ao clicar
+            $('.update-header').on('click', function(e) {
+                e.preventDefault();
+                const content = $(this).next('.update-content');
+                content.toggle();
+            });
+        });
+    </script>
+  </body>
+</html>

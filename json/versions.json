@@ -1,0 +1,37 @@
+// {
+//     id: 1,
+//     title: "Pré-lançamento",
+//     date: "2024-02-12",
+//     status: "Finalizado",
+//     descriptions: [
+//         { description: "Deploy do projeto em fase de testes." }
+//     ]
+// },
+// {
+//     id: 2,
+//     title: "Lançamento da documentação",
+//     date: "2024-05-03",
+//     status: "Finalizado",
+//     descriptions: [
+//         { description: "Publicação completa da documentação técnica para uso do Portfolio Creator." }
+//     ]
+// },
+// {
+//     id: 3,
+//     title: "Lançamento de novo tema",
+//     date: "2024-06-30",
+//     status: "Finalizado",
+//     descriptions: [
+//         { description: "Nova feature: Registro e escolha de temas." },
+//         { description: "Lançamento do template ''example'' para personalização do portfólio." }
+//     ]
+// },
+// {
+//     id: 4,
+//     title: "Correção de bugs críticos",
+//     date: "2024-11-25",
+//     status: "Em Andamento",
+//     descriptions: [
+//         { description: "Correção de erros reportados pelos usuários que afetavam a estabilidade do sistema." }
+//     ]
+// }
