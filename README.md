@@ -13,6 +13,9 @@
         users with the ability to create their own custom templates.</p>
       <p>Repo: <a
           href="https://github.com/abdalazard/PortfolioCreator">https://github.com/abdalazard/PortfolioCreator</a></p>
+      <p>Wesite: <a
+          href="https://github.com/abdalazard/PortfolioCreato">https://abdalazard.github.io/portfolio-creator-docs</a></p>
+     
       <h2 id="current-project-status">Current Project Status</h2>
       <ul>
         <li><s><strong>Step 1 Completed:</strong> Implementation of the
